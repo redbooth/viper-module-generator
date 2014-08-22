@@ -1,5 +1,1 @@
-module VIPERGen
-
-
-
-end
+require 'vipergen/vipergen'

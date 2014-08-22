@@ -15,8 +15,12 @@ Gem::Specification.new do |s|
 
   # Files
   s.files         = Dir['LICENSE', 'README.md', 'lib/**/*']
-  s.test_files    = Dir['tests/**/*.rb']
+  s.test_files    = Dir['spec/**/*.rb']
   s.require_path  = 'lib'
+
+  # Dependencies
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'rspec'
 
   # Documentation
   s.rdoc_options = ['--charset=UTF-8']
