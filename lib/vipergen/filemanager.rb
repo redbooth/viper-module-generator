@@ -1,9 +1,4 @@
 module Vipergen
-	# Cosntants
-	class Generator
-
-	end
-
 	# File manager class
 	class FileManager
 		# Constants
@@ -24,29 +19,31 @@ module Vipergen
 		# @return String with valid path 
 		def self.path_from(template, language)
 			return nil if !is_language_valid(language) || !is_template_valid(template)
-			return "templates/#{template}/#{language}/"
+			return "lib/templates/#{template}/#{language}/"
 		end
 
 		# Returns an array with files in a given path
 		# @return Array with the files in a given path
 		def self.files_in_path(path)
-			return Dir.glob("#{path}**/*")
+			return Dir["#{path}**/*"].select {|f| File.file?(f)}
 		end
-	end
 
-	# File Reader class
-	class Reader
-		# Read the content of a file in a given path and return it as an String
-		def self.write_string_to_path(path)
-
+		# Returns the destination viper path 
+		# @return Destination root path
+		def self.destination_viper_path(path, name)
+			return "#{path}/#{name}"
 		end
-	end
 
-	class Writter
-		# Write  a String into a file in a given path
-		# @return String with the read file
-		def self.string_from_file_in_path(path)
-
+		# Copy a system item to another place
+		def self.copy(from, to)
+			Dir.mkdir (to)
+			FileUtils.copy_entry(from, to)	
 		end
+
+		# Move a system item to another place
+		def self.move(from, to)
+			FileUtils.move(from, to)
+		end
+
 	end
 end

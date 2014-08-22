@@ -6,6 +6,11 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    byebug (3.2.0)
+      columnize (~> 0.8)
+      debugger-linecache (~> 1.2)
+    columnize (0.8.9)
+    debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
     rake (10.3.2)
     rspec (3.0.0)
@@ -27,5 +32,6 @@ PLATFORMS
 DEPENDENCIES
   VIPERGen!
   bundler (~> 1.0)
+  byebug
   rake
   rspec

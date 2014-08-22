@@ -1,1 +1,5 @@
-require 'vipergen/vipergen'
+require 'vipergen/generator'
+require 'vipergen/filemanager'
+require 'vipergen/reader'
+require 'vipergen/writter'
+require 'byebug'
