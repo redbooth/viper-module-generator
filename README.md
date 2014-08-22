@@ -14,6 +14,7 @@ The implementation scheme returned by this generator is hardly inspired in the e
 - [Viper files structure](#viper-files-structure)
 - [How to install vipergen](#how-to-install-vipergen)
 - [How to generate a VIPER module with a given name?](#how-to-generate-viper-module-with-a-given-name?)
+- [Resources](#resources)
 
 ## Features
 - Generates the module in Swift and Objective-C
@@ -29,3 +30,6 @@ The implementation scheme returned by this generator is hardly inspired in the e
 
 
 ## How to generate a VIPER module with a given name?
+
+## Resources
+- Rspec documentation: http://rubydoc.info/gems/rspec-expectations/frames
