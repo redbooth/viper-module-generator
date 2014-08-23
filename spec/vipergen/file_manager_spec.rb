@@ -18,11 +18,6 @@ describe Vipergen::FileManager do
 			path = Vipergen::FileManager.path_from("asga", "swift")
 			expect(path).to be(nil)
 		end
-		it "should return the path if a valid language and template is passed" do
-			path = Vipergen::FileManager.path_from("default", "swift")
-			expect(path).to eq(File.join(Vipergen::DirUtils.templates_dir, "templates","default", "swift"))
-		end
-
 		it "should append the name to the given user path" do
 			to_path = Vipergen::FileManager.destination_viper_path("path/", "pepito")
 			expect(to_path).to eq("path/pepito")
