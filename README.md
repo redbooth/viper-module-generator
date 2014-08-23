@@ -70,7 +70,15 @@ If everything were right, you should have now the vipergem command available in 
 
 ## How to generate a VIPER module with a given name?
 
-
+## Developer tips
+### Update the gem 
+When the gem is updated it has to be reported to the gem repository. I followed this tutorial http://amaras-tech.co.uk/article/43/Creating_executable_gems that basically says that once you have your gem ready execute:
+```bash
+gem build vipergen.gemspec
+gem install vipergen-0.1.gem
+gem push vipergen-0.1.gem
+```
+Then you'll be asked for your credentials in order to make the update in the repo (http://guides.rubygems.org/publishing/)
 
 ## Resources
 - Rspec documentation: http://rubydoc.info/gems/rspec-expectations/frames
