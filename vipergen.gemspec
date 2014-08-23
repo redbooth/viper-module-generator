@@ -1,7 +1,6 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path('../lib', __FILE__)
 require 'vipergen/version'
-require 'byebug'
 
 Gem::Specification.new do |s|
   s.name        = 'VIPERGen'
@@ -34,5 +33,5 @@ Gem::Specification.new do |s|
   ]
   s.add_development_dependency 'bundler', '~> 1.0'
   s.add_development_dependency 'byebug'
-  
+
 end
