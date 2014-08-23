@@ -20,7 +20,7 @@ describe Vipergen::FileManager do
 		end
 		it "should append the name to the given user path" do
 			to_path = Vipergen::FileManager.destination_viper_path("path/", "pepito")
-			expect(to_path).to eq("path/pepito")
+			expect(to_path).to eq(File.join(File.expand_path("path/"),"pepito"))
 		end
 	end
 	context "copying a folder to a diferent place" do
