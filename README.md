@@ -72,6 +72,11 @@ sudo gem install vipergen
 If everything were right, you should have now the vipergem command available in your system console
 
 ## How to generate a VIPER module with a given name?
+You have just to execute the following command
+```bash
+vipergen generate MyFirstViperModule --path=~/myproject/shared
+```
+And then the files structure will be automatically created. Don't forget to add this folder to your project dragging it into the XCode/Appcode inspector
 
 ## Developer tips
 ### Update the gem 
