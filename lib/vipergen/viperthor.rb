@@ -1,5 +1,6 @@
-require 'Thor'
+require 'thor'
 require 'vipergen'
+
 module Vipergen
   class ViperThor < Thor
 	desc "generate", "Generate a VIPER module"
