@@ -18,6 +18,7 @@ The implementation scheme returned by this generator is hardly inspired in the e
 
 ## Features
 - Generates the module in Swift and Objective-C
+- Ready to be installed as a gem https://rubygems.org/gems/VIPERGen
 
 ### Changelog 0.1
 - Added default template
@@ -85,3 +86,4 @@ Then you'll be asked for your credentials in order to make the update in the rep
 - Rspec documentation: http://rubydoc.info/gems/rspec-expectations/frames
 - XCode Plugins: http://nshipster.com/xcode-plugins/
 - XCodeProj gem (to modify project groups structure): https://github.com/CocoaPods/Xcodeproj
+- Thor, powerful Ruby library for command line: http://whatisthor.com/
