@@ -21,11 +21,12 @@ The implementation scheme returned by this generator is hardly inspired in the e
 
 ### Changelog 0.1
 - Added default template
-
+- Fully components tested
 
 ### Expected in version 0.2
 - FetchedResultsController template
 - Login template
+- Integrate with XCode as a plugin (http://nshipster.com/xcode-plugins/)
 
 ## Viper files structure
 ```bash
