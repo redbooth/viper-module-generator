@@ -10,6 +10,5 @@ RSpec::Core::RakeTask.new
 task :default => [:spec]
 task :test => :spec
 task :debug do 
-	require 'byebug'
 	Vipergen::Generator.generate_viper('default','objc','Debug','~/Desktop')
 end

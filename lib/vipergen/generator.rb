@@ -3,7 +3,6 @@ module Vipergen
 	class Generator
 		# Main method that generate the VIPER files structure
 		def self.generate_viper(template, language, name, path)
-			byebug
 			puts "Generating VIPER-Module"
 			puts "Template: #{template}"
 			puts "Language: #{language}"
