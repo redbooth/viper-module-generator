@@ -1,5 +1,5 @@
 require 'spec_helper'
-
+require 'byebug'
 describe Vipergen::FileManager do
 	context "when generating path" do
 		it "should return nil if no valid template" do
@@ -20,7 +20,7 @@ describe Vipergen::FileManager do
 		end
 		it "should return the path if a valid language and template is passed" do
 			path = Vipergen::FileManager.path_from("default", "swift")
-			expect(path).to eq("templates/default/swift/")
+			expect(path).to eq(File.join(Vipergen::DirUtils.templates_dir,"default", "swift"))
 		end
 
 		it "should append the name to the given user path" do
@@ -75,8 +75,7 @@ describe Vipergen::Generator do
 		end
 
 		it "should raise a SyntaxError exeption if there's a file in the template without the proper name" do
-			expect(Vipergen::Generator).to raise(SyntaxError)
-			Vipergen::Generator.rename_files(["asgasgs.txt"], "pepito")
+			expect{Vipergen::Generator.rename_files(["asgasgs.txt"], "pepito")}.to raise_error
 		end
 
 		it "should rename the VIPER in name to the given name" do

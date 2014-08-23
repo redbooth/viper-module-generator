@@ -3,9 +3,6 @@ module Vipergen
 	class Generator
 		# Main method that generate the VIPER files structure
 		def self.generate_viper(argv=[""])
-
-			puts "Printing current directory #{Dir.pwd}"
-
 			puts "Generating VIPER-Module"
 			path_from = Vipergen::FileManager.path_from(template, language)
 			path_to = Vipergen::FileManager.destination_viper_path(path, name)

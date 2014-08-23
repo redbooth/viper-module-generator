@@ -20,7 +20,7 @@ module Vipergen
 		# @return String with valid path 
 		def self.path_from(template, language)
 			return nil if !is_language_valid(language) || !is_template_valid(template)
-			return File.join("lib/templates", template, language)
+			return File.join(Vipergen::DirUtils.templates_dir, template, language)
 		end
 
 		# Returns an array with files in a given path

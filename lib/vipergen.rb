@@ -1,5 +1,7 @@
 require 'vipergen/generator'
 require 'vipergen/filemanager'
+require 'vipergen/dirutils'
+require 'vipergen/version'
 
 module Vipergen
 	# Constants

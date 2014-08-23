@@ -4,7 +4,7 @@ require 'vipergen/version'
 
 Gem::Specification.new do |s|
   s.name        = 'VIPERGen'
-  s.version     = VIPERGen::VERSION.dup
+  s.version     = Vipergen::VERSION.dup
   s.platform    = Gem::Platform::RUBY
   s.summary     = 'Generates XCode VIPER module controllers structure'
   s.email       = 'pedro@redbooth.com'
@@ -33,5 +33,4 @@ Gem::Specification.new do |s|
   ]
   s.add_development_dependency 'bundler', '~> 1.0'
   s.add_development_dependency 'byebug'
-
 end
