@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'byebug'
+
 describe Vipergen::FileManager do
 	context "when generating path" do
 		it "should return nil if no valid template" do
