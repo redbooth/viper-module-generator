@@ -23,6 +23,10 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'
 
+  # Executables
+  s.executables << 'vipergen'
+  s.bindir       = 'bin'   
+
   # Documentation
   s.rdoc_options = ['--charset=UTF-8']
   s.extra_rdoc_files = [

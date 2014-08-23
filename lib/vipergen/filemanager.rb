@@ -4,7 +4,8 @@ module Vipergen
 		# Constants
 		LANGUAGES = ["swift", "objc"]
 		TEMPLATES = ["default", "fetchedresultscontroller"]
-
+		REPLACEMENT_KEY = "VIPER"
+		
 		# Returns if the template is valid by the VIPER generator 
 		def self.is_template_valid(template)
 			return TEMPLATES.include? template
@@ -19,7 +20,7 @@ module Vipergen
 		# @return String with valid path 
 		def self.path_from(template, language)
 			return nil if !is_language_valid(language) || !is_template_valid(template)
-			return "lib/templates/#{template}/#{language}/"
+			return File.join("lib/templates", template, language)
 		end
 
 		# Returns an array with files in a given path
@@ -31,7 +32,7 @@ module Vipergen
 		# Returns the destination viper path 
 		# @return Destination root path
 		def self.destination_viper_path(path, name)
-			return "#{path}/#{name}"
+			return File.join(path,name)
 		end
 
 		# Copy a system item to another place

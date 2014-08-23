@@ -1,5 +1,9 @@
 require 'vipergen/generator'
 require 'vipergen/filemanager'
-require 'vipergen/reader'
-require 'vipergen/writter'
-require 'byebug'
+
+module Vipergen
+	# Constants
+	LANGUAGES = ["swift", "objc"]
+	TEMPLATES = ["default", "fetchedresultscontroller"]
+	REPLACEMENT_KEY = "VIPER"
+end

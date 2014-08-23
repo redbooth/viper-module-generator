@@ -7,15 +7,4 @@ require "vipergen"
 
 RSpec::Core::RakeTask.new
 
-puts "------- VIPER GENERATOR---------\n"
 task :test => :spec
-task :vipergen, [:template, :language, :name, :path] do |t, args|
-	if args.count < 4 
-		puts "Wrong number of parameters. Required template, language, name, path"
-	else
-		byebug
-		puts args
-		Vipergen::Generator.generate_viper(args[:template], args[:language], args[:name], args[:path])
-	end
-	puts "--------------------------------"
-end 

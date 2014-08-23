@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+#require 'rubygems'
+require 'vipergen/generator'
+
+puts "------- VIPER GENERATOR---------\n"
+Vipergen::Generator.generate_viper(ARGV)
+puts "--------------------------------\n"
