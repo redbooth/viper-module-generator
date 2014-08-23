@@ -2,7 +2,7 @@ require 'vipergen/generator'
 require 'vipergen/filemanager'
 require 'vipergen/dirutils'
 require 'vipergen/version'
-require 'vipergen/argumentsparser'
+require 'vipergen/viperthor'
 
 module Vipergen
 	# Constants

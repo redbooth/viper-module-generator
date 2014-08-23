@@ -37,7 +37,7 @@ module Vipergen
 
 		# Copy a system item to another place
 		def self.copy(from, to)
-			Dir.mkdir (to)
+			FileUtils.mkdir_p (to)
 			FileUtils.copy_entry(from, to)	
 		end
 

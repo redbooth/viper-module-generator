@@ -21,6 +21,9 @@ Gem::Specification.new do |s|
   # Dependencies
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'
+  s.add_development_dependency 'bundler', '~> 1.0'
+  s.add_development_dependency 'byebug'
+  s.add_dependency 'thor'
 
   # Executables
   s.executables << 'vipergen'
@@ -31,6 +34,5 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = [
     'README.md'
   ]
-  s.add_development_dependency 'bundler', '~> 1.0'
-  s.add_development_dependency 'byebug'
+  
 end

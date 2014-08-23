@@ -2,12 +2,17 @@ module Vipergen
 	# Cosntants
 	class Generator
 		# Main method that generate the VIPER files structure
-		def self.generate_viper(argv=[""])
+		def self.generate_viper(template, language, name, path)
 			puts "Generating VIPER-Module"
+			puts "Template: #{template}"
+			puts "Language: #{language}"
+			puts "Name: #{name}"
+			puts "Path: #{path}"
 			path_from = Vipergen::FileManager.path_from(template, language)
 			path_to = Vipergen::FileManager.destination_viper_path(path, name)
 			Vipergen::FileManager.copy(path_from, path_to)
 			files = Vipergen::FileManager.files_in_path(path_to)
+			rename_files(files,name)
 		end
 
 		# Rename all the files in the files array
