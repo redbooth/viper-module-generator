@@ -1,3 +1,6 @@
 language: ruby
 rvm:
   - 2.1.0
+addons:
+  code_climate:
+    repo_token: CODECLIMATE_REPO_TOKEN
