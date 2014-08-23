@@ -7,5 +7,5 @@ require "vipergen"
 
 RSpec::Core::RakeTask.new
 
-default :test => :spec
+task :default => [:spec]
 task :test => :spec
