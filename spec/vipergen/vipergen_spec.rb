@@ -120,13 +120,8 @@ describe Vipergen::TemplateManager do
 		end
 
 		it "should return the proper templates in templates directory" do
-			Vipergen::DirUtils.stub(:templates_dir).and_return('foo/')
+			Vipergen::TemplateManager.stub(:templates_dir).and_return('foo/')
 			expect(Vipergen::TemplateManager.templates_paths.count).to eq(2)
-		end
-
-		it "should" do
-			require 'byebug'
-			Vipergen::TemplateManager.templates_description()
 		end
 
 		after (:each) do

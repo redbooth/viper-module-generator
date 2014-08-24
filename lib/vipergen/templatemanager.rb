@@ -1,10 +1,19 @@
 require 'yaml'
 module Vipergen
 	class TemplateManager
+
+		# Returns the templates dir
+	    def self.templates_dir
+	      t = ["#{File.dirname(File.expand_path($0))}/../lib/#{Vipergen::NAME}",
+	           "#{Gem.dir}/gems/#{Vipergen::NAME}-#{Vipergen::VERSION}/lib/templates"]
+	      t.each {|i| return i if File.readable?(i) }
+	      raise "both paths are invalid: #{t}"
+	    end
+
 		# Get the available templates paths
 		# @return Array[String] with available templates paths
 		def self.templates_paths()
-			template_dir = Vipergen::DirUtils.templates_dir
+			template_dir = Vipergen::TemplateManager.templates_dir
 			return Vipergen::DirUtils.directories_in(template_dir)
 		end
 
