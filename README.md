@@ -29,7 +29,7 @@ The implementation scheme returned by this generator is hardly inspired in the e
 ### Changelog 0.1.4
 - Added `templates` command to know which templates are available
 - YAML file in each template with the information about the template (more scalable)
-- 
+
 ### Changelog 0.1
 - Added default template
 - Fully components tested
