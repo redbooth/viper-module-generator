@@ -35,6 +35,7 @@ The implementation scheme returned by this generator is hardly inspired in the e
 - Fully components tested
 
 ### Expected in version 0.2
+- Example project of Redbooth login with notifications
 - FetchedResultsController template
 - Default template in Swift
 - Login template
