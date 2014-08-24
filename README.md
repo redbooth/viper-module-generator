@@ -98,6 +98,13 @@ Are you interested in VIPER and you would like to contribute with this gem addin
 - Create a folder inside `templates` with the name of your template
 - You'll have to create inside the templates in both languages, Swift and Objective-C (get inspired from existing templates)
 - Use the word VIPER where you want the name to be replaced in.
+- Remember to add the file viperspec.yml with the description of your template as below:
+```yaml
+author: pepi
+author_email: pepibumur@gmail.com
+template_description: Default template with the simplest structure using VIPER
+updated_at: 2014-08-24
+```
 - Report it as a PR in this repo updating the gem version in Gemspec.
 
 ## Resources
