@@ -105,3 +105,6 @@ Are you interested in VIPER and you would like to contribute with this gem addin
 - XCode Plugins: http://nshipster.com/xcode-plugins/
 - XCodeProj gem (to modify project groups structure): https://github.com/CocoaPods/Xcodeproj
 - Thor, powerful Ruby library for command line: http://whatisthor.com/
+
+## Contact
+If you have any doubt about the gem or even if you want to make any suggestion you can do it directly to my email address, pedro@redbooth.com . You can use the issues Github page too
