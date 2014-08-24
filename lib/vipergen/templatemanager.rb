@@ -4,10 +4,7 @@ module Vipergen
 
 		# Returns the templates dir
 	    def self.templates_dir
-	      t = ["#{File.dirname(File.expand_path($0))}/../lib/#{Vipergen::NAME}",
-	           "#{Gem.dir}/gems/#{Vipergen::NAME}-#{Vipergen::VERSION}/lib/templates"]
-	      t.each {|i| return i if File.readable?(i) }
-	      raise "both paths are invalid: #{t}"
+	      t = "#{Gem.dir}/gems/#{Vipergen::NAME}-#{Vipergen::VERSION}/lib/templates"
 	    end
 
 		# Get the available templates paths
