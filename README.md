@@ -26,6 +26,10 @@ The implementation scheme returned by this generator is hardly inspired in the e
 - Generates the module in Swift and Objective-C
 - Ready to be installed as a gem https://rubygems.org/gems/VIPERGen
 
+### Changelog 0.1.4
+- Added `templates` command to know which templates are available
+- YAML file in each template with the information about the template (more scalable)
+- 
 ### Changelog 0.1
 - Added default template
 - Fully components tested
