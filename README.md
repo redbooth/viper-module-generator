@@ -26,7 +26,7 @@ The implementation scheme returned by this generator is hardly inspired in the e
 - Generates the module in Swift and Objective-C
 - Ready to be installed as a gem https://rubygems.org/gems/VIPERGen
 
-### Changelog 0.1.4
+### Changelog 0.1.6
 - Added `templates` command to know which templates are available
 - YAML file in each template with the information about the template (more scalable)
 
@@ -36,6 +36,7 @@ The implementation scheme returned by this generator is hardly inspired in the e
 
 ### Expected in version 0.2
 - FetchedResultsController template
+- Default template in Swift
 - Login template
 - Integrate with XCode as a plugin (http://nshipster.com/xcode-plugins/)
 
