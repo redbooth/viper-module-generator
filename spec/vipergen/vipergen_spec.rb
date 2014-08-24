@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Vipergen::FileManager do
+describe Vipergen do
 	context "when generating path" do
 		it "should return nil if no valid template" do
 			valid_template = Vipergen::FileManager.is_template_valid("asdgas")
@@ -90,6 +90,47 @@ describe Vipergen::Generator do
 		after (:each) do
 			File.delete "#{Vipergen::REPLACEMENT_KEY}test.txt" if File.exist? "#{Vipergen::REPLACEMENT_KEY}test.txt"
 			File.delete "RENAMEDtest.txt" if File.exist? "RENAMEDtest.txt"
+		end
+	end
+end
+
+describe Vipergen::DirUtils do
+	context "getting directories" do
+		before (:each) do
+			Dir.mkdir 'foo'
+			Dir.mkdir 'foo/subfoo'
+		end
+
+		it "should return the directories inside a given one" do
+			expect(Vipergen::DirUtils.directories_in('foo').count).to eq(1)
+		end
+
+		after (:each) do
+			FileUtils.rm_rf('foo')
+		end
+	end
+end
+
+describe Vipergen::TemplateManager do
+	context "getting templates" do
+		before (:each) do
+			Dir.mkdir 'foo'
+			Dir.mkdir 'foo/subfoo'
+			Dir.mkdir 'foo/subfoo2'
+		end
+
+		it "should return the proper templates in templates directory" do
+			Vipergen::DirUtils.stub(:templates_dir).and_return('foo/')
+			expect(Vipergen::TemplateManager.templates_paths.count).to eq(2)
+		end
+
+		it "should" do
+			require 'byebug'
+			Vipergen::TemplateManager.templates_description()
+		end
+
+		after (:each) do
+			FileUtils.rm_rf('foo')
 		end
 	end
 end

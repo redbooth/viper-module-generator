@@ -15,5 +15,11 @@ module Vipergen
 	      t.each {|i| return i if File.readable?(i) }
 	      raise "both paths are invalid: #{t}"
 	    end
+
+	    # Returns the directories inside a given one
+	    def self.directories_in(directory)
+	    	expanded_dir = File.expand_path(directory)
+	    	return Dir.glob(File.join(expanded_dir,'*')).select {|f| File.directory? f}
+	    end
 	end
 end

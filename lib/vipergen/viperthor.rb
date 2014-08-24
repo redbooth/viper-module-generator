@@ -10,5 +10,10 @@ module Vipergen
 	def generate(name)
 	   Vipergen::Generator.generate_viper(options[:template], options[:language], name, options[:path])
 	end
+
+	desc "templates", "Get a list of available templates"
+	def templates()
+		puts Vipergen::TemplateManager.templates_description()
+	end
   end
 end

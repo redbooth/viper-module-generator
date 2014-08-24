@@ -3,12 +3,11 @@ module Vipergen
 	class FileManager
 		# Constants
 		LANGUAGES = ["swift", "objc"]
-		TEMPLATES = ["default", "fetchedresultscontroller"]
 		REPLACEMENT_KEY = "VIPER"
 		
 		# Returns if the template is valid by the VIPER generator 
 		def self.is_template_valid(template)
-			return TEMPLATES.include? template
+			return Vipergen::TemplateManager.templates.include? template
 		end
 
 		# Returns if the language is valid by the VIPER generator
