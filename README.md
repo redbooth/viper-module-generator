@@ -78,7 +78,7 @@ The implementation scheme returned by this generator is hardly inspired in the e
 ## How to install vipergen ?
 You can install it easily as using the gem. With ruby installed in your OSX execute:
 ```bash
-sudo gem install VIPERGen
+sudo gem install vipergen
 ```
 If everything were right, you should have now the vipergem command available in your system console
 
