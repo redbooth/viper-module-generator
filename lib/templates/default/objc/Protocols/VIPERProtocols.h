@@ -34,8 +34,8 @@
 
 @protocol VIPERViewControllerProtocol
 @required
-- (void)setPresenter:(id<VIPERPresenterProtocol, VIPERInteractorOutputProtocol, VIPERDataManagerOutputProtocol>)presenter;
-- (id<VIPERPresenterProtocol, VIPERInteractorOutputProtocol, VIPERDataManagerOutputProtocol>)presenter;
+- (void)setPresenter:(id<VIPERPresenterProtocol, VIPERInteractorOutputProtocol>)presenter;
+- (id<VIPERPresenterProtocol, VIPERInteractorOutputProtocol>)presenter;
 @end
 
 @protocol VIPERDataManagerInputProtocol
