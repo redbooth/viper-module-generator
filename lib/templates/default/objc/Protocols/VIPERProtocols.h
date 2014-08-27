@@ -28,8 +28,8 @@
 - (id <VIPERViewControllerProtocol>)viewController;
 - (void)setInteractor:(id <VIPERInteractorInputProtocol, VIPERDataManagerOutputProtocol>)interactor;
 - (id <VIPERInteractorInputProtocol, VIPERDataManagerOutputProtocol>)interactor;
-- (void)setWireframe:(VIPERWireFrame*)wireframe;
-- (VIPERWireFrame*)wireframe;
+- (void)setWireFrame:(VIPERWireFrame*)wireFrame;
+- (VIPERWireFrame*)wireFrame;
 @end
 
 @protocol VIPERViewControllerProtocol
