@@ -8,7 +8,7 @@
 
 @class VIPERWireframe;
 
-@interface VIPERPresenter : NSObject <VIPERPresenterProtocol, VIPERInteractorOutputProtocol, VIPERDataManagerOutputProtocol>
+@interface VIPERPresenter : NSObject <VIPERPresenterProtocol, VIPERInteractorOutputProtocol>
 
 // Properties
 @property (nonatomic, strong) UIViewController <VIPERViewControllerProtocol> * viewController;
