@@ -17,16 +17,24 @@ protocol VIPERInteractorOutputProtocol
 
 protocol VIPERInteractorInputProtocol
 {
-    func setPresenter(presenter: VIPERPresenterProtocol)
-    func presenter() -> (VIPERPresenterProtocol)
+    var presenter: VIPERPresenterProtocol { get set }
     
     /* Add your extra communication methods here */
     /* Presenter -> Interactor */
 }
 
+protocol VIPERPresenterProtocol
+{
+    var viewController: VIPERViewControllerProtocol { get set }
+    var interactor: VIPERDataManagerOutputProtocol { get set }
+    
+    //    /* Add your extra communication methods here */
+    //    /* Presenter -> ViewController */
+}
+
 protocol VIPERViewControllerProtocol
 {
-    
+
 }
 
 protocol VIPERDataManagerInputProtocol
@@ -38,18 +46,7 @@ protocol VIPERDataManagerOutputProtocol {
     
 }
 
-protocol VIPERPresenterProtocol
-{
-//    func setViewController(viewController: VIPERViewControllerProtocol)
-//    func viewController() -> (VIPERViewControllerProtocol)
-//    func setInteractor(interactor: VIPERInteractorInputProtocol, VIPERDataManagerOutputProtocol)
-//    func interactor() -> (interactor: VIPERInteractorInputProtocol, VIPERDataManagerOutputProtocol)
-//    func setWireFrame(wireFrame: VIPERWireframe)
-//    func wireFrame() -> VIPERWireframe
-//    
-//    /* Add your extra communication methods here */
-//    /* Presenter -> ViewController */
-}
+
 
 
 /*
@@ -63,11 +60,7 @@ protocol VIPERPresenterProtocol
 
 @end
 
-@protocol VIPERInteractorInputProtocol
-@required
-- (void)setPresenter:(id <VIPERPresenterProtocol>)presenter;
-- (id <VIPERPresenterProtocol>)presenter;
-@end
+
 
 @protocol VIPERPresenterProtocol
 @required

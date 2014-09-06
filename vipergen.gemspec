@@ -3,7 +3,7 @@ $:.push File.expand_path('../lib', __FILE__)
 require 'vipergen/version'
 
 Gem::Specification.new do |s|
-  s.name        = 'VIPERGen'
+  s.name        = 'vipergen'
   s.version     = Vipergen::VERSION.dup
   s.platform    = Gem::Platform::RUBY
   s.summary     = 'Generates XCode VIPER module controllers structure'
