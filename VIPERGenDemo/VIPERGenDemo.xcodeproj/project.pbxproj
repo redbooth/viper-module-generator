@@ -14,6 +14,7 @@
 		3D056C7819A7847D00902567 /* VIPERWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D056C5D19A7847D00902567 /* VIPERWireFrame.m */; };
 		3D056C7B19A7876A00902567 /* VIPERDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D056C7A19A7876A00902567 /* VIPERDataManager.swift */; };
 		3D056C7D19A7881100902567 /* VIPERProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D056C7C19A7881100902567 /* VIPERProtocols.swift */; };
+		3D11B07019BB6928009274FB /* VIPERWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11B06F19BB6928009274FB /* VIPERWireframe.swift */; };
 		B749E4728976F7088B32116F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B749EA3AB3A2A76ABF088898 /* Images.xcassets */; };
 		B749E7DEA40F5EE82C43C1FA /* VIPERGenDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B749EA23C32AF122803CC13F /* VIPERGenDemoTests.swift */; };
 		B749EAC79D1784014A2BDCCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B749E008AA7BF4ECBADA4151 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		3D056C7919A784A800902567 /* VIPERProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIPERProtocols.h; sourceTree = "<group>"; };
 		3D056C7A19A7876A00902567 /* VIPERDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERDataManager.swift; sourceTree = "<group>"; };
 		3D056C7C19A7881100902567 /* VIPERProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERProtocols.swift; sourceTree = "<group>"; };
+		3D11B06F19BB6928009274FB /* VIPERWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERWireframe.swift; sourceTree = "<group>"; };
 		B749E1CA001F227ABD51B588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		B749E5AD88942EB96F1BF056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		B749E8E7BDEC9D7FB43DCCCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 		3D056C6419A7847D00902567 /* WireFrame */ = {
 			isa = PBXGroup;
 			children = (
+				3D11B06F19BB6928009274FB /* VIPERWireframe.swift */,
 			);
 			path = WireFrame;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				3D056C7419A7847D00902567 /* VIPERDataManager.m in Sources */,
 				3D056C7819A7847D00902567 /* VIPERWireFrame.m in Sources */,
 				3D056C7719A7847D00902567 /* VIPERViewController.m in Sources */,
+				3D11B07019BB6928009274FB /* VIPERWireframe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
