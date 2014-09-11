@@ -1,6 +1,10 @@
 module Vipergen
 	# Cosntants
 	class Generator
+		# Constants
+		LANGUAGES = ["swift", "objc"]
+		REPLACEMENT_KEY = "VIPER"
+
 		# Main method that generate the VIPER files structure
 		def self.generate_viper(template, language, name, path)
 			puts "Generating VIPER-Module"
@@ -20,7 +24,7 @@ module Vipergen
 		# - It renames the content of the file
 		def self.rename_files(files, name)
 			files.each do |file|
-				raise SyntaxError unless file.include? Vipergen::REPLACEMENT_KEY
+				raise SyntaxError unless file.include? (Vipergen::Generator::REPLACEMENT_KEY)
 				rename_file(file, name)
 			end
 		end
@@ -29,7 +33,7 @@ module Vipergen
 		# - It renames the name of the file
 		# - It renames the content of the file
 		def self.rename_file(file, name)
-			new_path = file.gsub(Vipergen::REPLACEMENT_KEY, name)
+			new_path = file.gsub((Vipergen::Generator::REPLACEMENT_KEY), name)
 			Vipergen::FileManager.move(file, new_path)
 			rename_file_content(new_path, name)
 		end
@@ -43,7 +47,7 @@ module Vipergen
 			file.close
 
 			# Replacing content
-			content = content.gsub(Vipergen::REPLACEMENT_KEY, name)
+			content = content.gsub((Vipergen::Generator::REPLACEMENT_KEY), name)
 
 			# Saving content with replaced string
 			File.open(filename, "w+") do |file|

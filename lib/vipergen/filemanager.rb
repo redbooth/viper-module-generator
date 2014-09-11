@@ -1,10 +1,7 @@
 module Vipergen
 	# File manager class
 	class FileManager
-		# Constants
-		LANGUAGES = ["swift", "objc"]
-		REPLACEMENT_KEY = "VIPER"
-		
+
 		# Returns if the template is valid by the VIPER generator 
 		def self.is_template_valid(template)
 			return Vipergen::TemplateManager.templates.include? template
@@ -12,14 +9,14 @@ module Vipergen
 
 		# Returns if the language is valid by the VIPER generator
 		def self.is_language_valid(language)
-			return LANGUAGES.include? language
+			return (Vipergen::Generator::LANGUAGES).include? language
 		end
 
 		# Return the path if valid template and language
 		# @return String with valid path 
 		def self.path_from(template, language)
 			return nil if !is_language_valid(language) || !is_template_valid(template)
-			return File.join(Vipergen::TemplatesManager.templates_dir, template, language)
+			return File.join(Vipergen::TemplateManager.templates_dir, template, language)
 		end
 
 		# Returns an array with files in a given path
