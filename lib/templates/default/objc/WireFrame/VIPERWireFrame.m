@@ -16,6 +16,7 @@
     viewController.presenter.interactor.presenter = viewController.presenter;
     viewController.presenter.viewController = viewController;
     viewController.presenter.wireFrame = [VIPERWireFrame new];
+    viewController.presenter.wireFrame.viewController = viewController;
     viewController.presenter.interactor.dataManager = [VIPERDataManager new];
     viewController.presenter.interactor.dataManager.interactor = viewController.presenter.interactor;
 
