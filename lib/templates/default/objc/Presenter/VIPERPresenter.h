@@ -11,7 +11,7 @@
 @interface VIPERPresenter : NSObject <VIPERPresenterProtocol, VIPERInteractorOutputProtocol>
 
 // Properties
-@property (nonatomic, strong) UIViewController <VIPERViewControllerProtocol> * viewController;
+@property (nonatomic, weak) UIViewController <VIPERViewControllerProtocol> * viewController;
 @property (nonatomic, strong) id <VIPERInteractorInputProtocol> interactor;
 @property (nonatomic, strong) VIPERWireFrame *wireFrame;
 
