@@ -6,7 +6,7 @@
 #import <Foundation/Foundation.h>
 #import "VIPERProtocols.h"
 
-@class VIPERWireframe;
+@class VIPERWireFrame;
 
 @interface VIPERPresenter : NSObject <VIPERPresenterProtocol, VIPERInteractorOutputProtocol>
 
