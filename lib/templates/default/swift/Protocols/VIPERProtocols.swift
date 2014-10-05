@@ -6,7 +6,34 @@
 //  Copyright (c) 2014 ___Redbooth___. All rights reserved.
 //
 
+//Problem with a bucle in protocols: http://stackoverflow.com/questions/26205809/cyclic-loop-between-protocols-in-swift
+
 import Foundation
+
+protocol VIPERPresenterProtocol
+{
+    var view: VIPERViewProtocol? { get set }
+    var interactor: VIPERInteractorInputProtocol? { get set }
+    var wireFrame: VIPERWireFrame? { get set }
+
+    //    /* Add your extra communication methods here */
+    //    /* Presenter -> ViewController */
+}
+
+protocol VIPERViewProtocol
+{
+    var presenter: VIPERDataManagerOutputProtocol? { get set }
+}
+
+protocol VIPERDataManagerInputProtocol
+{
+    //var interactor: VIPERDataManagerOutputProtocol? { get set }
+}
+
+protocol VIPERDataManagerOutputProtocol
+{
+    var dataManager: VIPERDataManagerInputProtocol { get set }
+}
 
 
 protocol VIPERInteractorOutputProtocol
@@ -22,29 +49,3 @@ protocol VIPERInteractorInputProtocol
     /* Add your extra communication methods here */
     /* Presenter -> Interactor */
 }
-
-protocol VIPERPresenterProtocol
-{
-    var viewController: VIPERViewControllerProtocol? { get set }
-    var interactor: VIPERInteractorInputProtocol? { get set }
-    var wireFrame: VIPERWireFrame? { get set }
-
-    //    /* Add your extra communication methods here */
-    //    /* Presenter -> ViewController */
-}
-
-protocol VIPERViewControllerProtocol
-{
-    var presenter: VIPERViewControllerProtocol? { get set }
-}
-
-protocol VIPERDataManagerInputProtocol
-{
-    var interactor: VIPERDataManagerOutputProtocol? { get set }
-}
-
-protocol VIPERDataManagerOutputProtocol
-{
-    //var dataManager: VIPERDataManagerInputProtocol { get set }
-}
-

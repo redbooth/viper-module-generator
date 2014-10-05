@@ -9,16 +9,22 @@
 
 + (void)presentVIPERModuleFrom:(UIViewController*)fromViewController
 {
-    UIViewController <VIPERViewControllerProtocol> *viewController;
-    viewController = [[VIPERViewController alloc] init];
-    viewController.presenter = [VIPERPresenter new];
-    viewController.presenter.interactor = [VIPERInteractor new];
-    viewController.presenter.interactor.presenter = viewController.presenter;
-    viewController.presenter.viewController = viewController;
-    viewController.presenter.wireFrame = [VIPERWireFrame new];
-    viewController.presenter.wireFrame.viewController = viewController;
-    viewController.presenter.interactor.dataManager = [VIPERDataManager new];
-    viewController.presenter.interactor.dataManager.interactor = viewController.presenter.interactor;
+    // Generating module components
+    UIViewController <VIPERViewProtocol> *viewController = [[VIPERViewController alloc] init];
+    id <VIPERPresenterProtocol, VIPERInteractorOutputProtocol> presenter = [VIPERPresenter new];
+    id <VIPERInteractorInputProtocol, VIPERDataManagerOutputProtocol> interactor = [VIPERInteractor new];
+    id <VIPERDataManagerInputProtocol> dataManager = [VIPERDataManager new];
+    VIPERWireFrame *wireFrame = [VIPERWireFrame new];
+    
+    // Connecting
+    viewController.presenter = presenter;
+    presenter.view = viewController;
+    presenter.wireFrame = wireFrame;
+    wireFrame.view = viewController;
+    presenter.interactor = interactor;
+    interactor.presenter = presenter;
+    interactor.dataManager = dataManager;
+    dataManager.interactor = interactor;
 
     //TOODO - New view controller presentation (present, push, pop, .. )
 }

@@ -9,12 +9,14 @@
 @protocol VIPERDataManagerOutputProtocol;
 @protocol VIPERInteractorOutputProtocol;
 @protocol VIPERInteractorInputProtocol;
-@protocol VIPERViewControllerProtocol;
+@protocol VIPERViewProtocol;
 @protocol VIPERPresenterProtocol;
 @protocol VIPERDataManagerInputProtocol;
 @class VIPERWireFrame;
 
-@protocol VIPERViewControllerProtocol
+typedef void (^CompletionBlock)(NSError **error);
+
+@protocol VIPERViewProtocol
 @required
 @property (nonatomic, strong) id <VIPERPresenterProtocol> presenter;
 /**
@@ -24,7 +26,7 @@
 
 @protocol VIPERPresenterProtocol
 @required
-@property (nonatomic, weak) id <VIPERViewControllerProtocol> viewController;
+@property (nonatomic, weak) id <VIPERViewProtocol> view;
 @property (nonatomic, strong) id <VIPERInteractorInputProtocol> interactor;
 @property (nonatomic, strong) VIPERWireFrame *wireFrame;
 /**

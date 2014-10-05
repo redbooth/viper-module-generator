@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import UIKit
 
-class VIPERWireFrame {
-    
+struct VIPERWireFrame {
+    var view: UIViewController?
 }
