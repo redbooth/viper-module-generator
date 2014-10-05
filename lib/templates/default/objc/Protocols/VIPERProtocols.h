@@ -7,43 +7,56 @@
 #import <UIKit/UIKit.h>
 
 @protocol VIPERDataManagerOutputProtocol;
+@protocol VIPERInteractorOutputProtocol;
+@protocol VIPERInteractorInputProtocol;
 @protocol VIPERViewControllerProtocol;
 @protocol VIPERPresenterProtocol;
 @protocol VIPERDataManagerInputProtocol;
 @class VIPERWireFrame;
 
-@protocol VIPERInteractorOutputProtocol
-
-@end
-
-@protocol VIPERInteractorInputProtocol
+@protocol VIPERViewControllerProtocol
 @required
-- (void)setPresenter:(id <VIPERPresenterProtocol>)presenter;
-- (id <VIPERPresenterProtocol>)presenter;
+@property (nonatomic, strong) id <VIPERPresenterProtocol> presenter;
+/**
+ * Add here your methods for communication VIEWCONTROLLER -> PRESENTER
+ */
 @end
 
 @protocol VIPERPresenterProtocol
 @required
-- (void)setViewController:(id <VIPERViewControllerProtocol>) viewController;
-- (id <VIPERViewControllerProtocol>)viewController;
-- (void)setInteractor:(id <VIPERInteractorInputProtocol, VIPERDataManagerOutputProtocol>)interactor;
-- (id <VIPERInteractorInputProtocol, VIPERDataManagerOutputProtocol>)interactor;
-- (void)setWireFrame:(VIPERWireFrame*)wireFrame;
-- (VIPERWireFrame*)wireFrame;
+@property (nonatomic, weak) id <VIPERViewControllerProtocol> viewController;
+@property (nonatomic, strong) id <VIPERInteractorInputProtocol> interactor;
+@property (nonatomic, strong) VIPERWireFrame *wireFrame;
+/**
+ * Add here your methods for communication VIEWCONTROLLER/WIREFRAME -> PRESENTER
+ */
 @end
 
-@protocol VIPERViewControllerProtocol
-@required
-- (void)setPresenter:(id<VIPERPresenterProtocol, VIPERInteractorOutputProtocol>)presenter;
-- (id<VIPERPresenterProtocol, VIPERInteractorOutputProtocol>)presenter;
+@protocol VIPERInteractorOutputProtocol
+/**
+ * Add here your methods for communication INTERACTOR -> PRESENTER
+ */
 @end
+
+@protocol VIPERInteractorInputProtocol
+@required
+@property (nonatomic, weak) id <VIPERInteractorOutputProtocol> presenter;
+/**
+ * Add here your methods for communication PRESENTER -> INTERACTOR
+ */
+@end
+
 
 @protocol VIPERDataManagerInputProtocol
-- (void)setInteractor:(id <VIPERDataManagerOutputProtocol>)interactor;
-- (id <VIPERDataManagerOutputProtocol>)interactor;
+@property (nonatomic, weak) id <VIPERDataManagerOutputProtocol> interactor;
+/**
+ * Add here your methods for communication INTERACTOR -> DATAMANAGER
+ */
 @end
 
 @protocol VIPERDataManagerOutputProtocol
-- (void)setDataManager:(id<VIPERDataManagerInputProtocol>)dataManager;
-- (id<VIPERDataManagerInputProtocol>)dataManager;
+@property (nonatomic, strong) id <VIPERDataManagerInputProtocol> dataManager;
+/**
+ * Add here your methods for communication DATAMANAGER -> INTERACTOR
+ */
 @end

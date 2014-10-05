@@ -8,8 +8,7 @@
 
 import Foundation
 
-
-class VIPERDataManager: VIPERDataManagerInputProtocol {
+struct VIPERDataManager: VIPERDataManagerInputProtocol {
     init () {
         self.interactor = nil
     }

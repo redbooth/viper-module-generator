@@ -17,7 +17,7 @@ protocol VIPERInteractorOutputProtocol
 
 protocol VIPERInteractorInputProtocol
 {
-    var presenter: VIPERPresenterProtocol { get set }
+    var presenter: VIPERInteractorOutputProtocol? { get set }
     
     /* Add your extra communication methods here */
     /* Presenter -> Interactor */
@@ -25,66 +25,26 @@ protocol VIPERInteractorInputProtocol
 
 protocol VIPERPresenterProtocol
 {
-    var viewController: VIPERViewControllerProtocol { get set }
-    var interactor: VIPERDataManagerOutputProtocol { get set }
-    
+    var viewController: VIPERViewControllerProtocol? { get set }
+    var interactor: VIPERInteractorInputProtocol? { get set }
+    var wireFrame: VIPERWireFrame? { get set }
+
     //    /* Add your extra communication methods here */
     //    /* Presenter -> ViewController */
 }
 
 protocol VIPERViewControllerProtocol
 {
-
+    var presenter: VIPERViewControllerProtocol? { get set }
 }
 
 protocol VIPERDataManagerInputProtocol
 {
-    
+    var interactor: VIPERDataManagerOutputProtocol? { get set }
 }
 
-protocol VIPERDataManagerOutputProtocol {
-    
+protocol VIPERDataManagerOutputProtocol
+{
+    //var dataManager: VIPERDataManagerInputProtocol { get set }
 }
 
-
-
-
-/*
-@protocol VIPERDataManagerOutputProtocol;
-@protocol VIPERViewControllerProtocol;
-@protocol VIPERPresenterProtocol;
-@protocol VIPERDataManagerInputProtocol;
-@class VIPERWireFrame;
-
-@protocol VIPERInteractorOutputProtocol
-
-@end
-
-
-
-@protocol VIPERPresenterProtocol
-@required
-- (void)setViewController:(id <VIPERViewControllerProtocol>) viewController;
-- (id <VIPERViewControllerProtocol>)viewController;
-- (void)setInteractor:(id <VIPERInteractorInputProtocol, VIPERDataManagerOutputProtocol>)interactor;
-- (id <VIPERInteractorInputProtocol, VIPERDataManagerOutputProtocol>)interactor;
-- (void)setWireFrame:(VIPERWireFrame*)wireFrame;
-- (VIPERWireFrame*)wireFrame;
-@end
-
-@protocol VIPERViewControllerProtocol
-@required
-- (void)setPresenter:(id<VIPERPresenterProtocol, VIPERInteractorOutputProtocol>)presenter;
-- (id<VIPERPresenterProtocol, VIPERInteractorOutputProtocol>)presenter;
-@end
-
-@protocol VIPERDataManagerInputProtocol
-- (void)setInteractor:(id <VIPERDataManagerOutputProtocol>)interactor;
-- (id <VIPERDataManagerOutputProtocol>)interactor;
-@end
-
-@protocol VIPERDataManagerOutputProtocol
-- (void)setDataManager:(id<VIPERDataManagerInputProtocol>)dataManager;
-- (id<VIPERDataManagerInputProtocol>)dataManager;
-@end
-*/
