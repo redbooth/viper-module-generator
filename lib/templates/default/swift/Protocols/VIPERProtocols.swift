@@ -8,13 +8,11 @@
 
 //Problem with a bucle in protocols: http://stackoverflow.com/questions/26205809/cyclic-loop-between-protocols-in-swift
 
-import Foundation
-
 protocol VIPERPresenterProtocol
 {
     var view: VIPERViewProtocol? { get set }
     var interactor: VIPERInteractorInputProtocol? { get set }
-    var wireFrame: VIPERWireFrame? { get set }
+    //var wireFrame: VIPERWireFrame? { get set }
 
     //    /* Add your extra communication methods here */
     //    /* Presenter -> ViewController */
@@ -22,17 +20,17 @@ protocol VIPERPresenterProtocol
 
 protocol VIPERViewProtocol
 {
-    var presenter: VIPERDataManagerOutputProtocol? { get set }
+    //var presenter: VIPERPresenterProtocol? { get set }
 }
 
 protocol VIPERDataManagerInputProtocol
 {
-    //var interactor: VIPERDataManagerOutputProtocol? { get set }
+    var interactor: VIPERDataManagerOutputProtocol? { get set }
 }
 
 protocol VIPERDataManagerOutputProtocol
 {
-    var dataManager: VIPERDataManagerInputProtocol { get set }
+    //var dataManager: VIPERDataManagerInputProtocol? { get set }
 }
 
 

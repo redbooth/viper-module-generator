@@ -7,14 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D056C7419A7847D00902567 /* VIPERDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D056C5019A7847D00902567 /* VIPERDataManager.m */; };
-		3D056C7519A7847D00902567 /* VIPERInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D056C5319A7847D00902567 /* VIPERInteractor.m */; };
-		3D056C7619A7847D00902567 /* VIPERPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D056C5619A7847D00902567 /* VIPERPresenter.m */; };
-		3D056C7719A7847D00902567 /* VIPERViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D056C5A19A7847D00902567 /* VIPERViewController.m */; };
-		3D056C7819A7847D00902567 /* VIPERWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D056C5D19A7847D00902567 /* VIPERWireFrame.m */; };
-		3D056C7B19A7876A00902567 /* VIPERDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D056C7A19A7876A00902567 /* VIPERDataManager.swift */; };
 		3D056C7D19A7881100902567 /* VIPERProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D056C7C19A7881100902567 /* VIPERProtocols.swift */; };
-		3D11B07019BB6928009274FB /* VIPERWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11B06F19BB6928009274FB /* VIPERWireFrame.swift */; };
 		B749E4728976F7088B32116F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B749EA3AB3A2A76ABF088898 /* Images.xcassets */; };
 		B749E7DEA40F5EE82C43C1FA /* VIPERGenDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B749EA23C32AF122803CC13F /* VIPERGenDemoTests.swift */; };
 		B749EAC79D1784014A2BDCCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B749E008AA7BF4ECBADA4151 /* Main.storyboard */; };
@@ -33,20 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D056C4F19A7847D00902567 /* VIPERDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPERDataManager.h; sourceTree = "<group>"; };
-		3D056C5019A7847D00902567 /* VIPERDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIPERDataManager.m; sourceTree = "<group>"; };
-		3D056C5219A7847D00902567 /* VIPERInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPERInteractor.h; sourceTree = "<group>"; };
-		3D056C5319A7847D00902567 /* VIPERInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIPERInteractor.m; sourceTree = "<group>"; };
-		3D056C5519A7847D00902567 /* VIPERPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPERPresenter.h; sourceTree = "<group>"; };
-		3D056C5619A7847D00902567 /* VIPERPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIPERPresenter.m; sourceTree = "<group>"; };
-		3D056C5919A7847D00902567 /* VIPERViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPERViewController.h; sourceTree = "<group>"; };
-		3D056C5A19A7847D00902567 /* VIPERViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIPERViewController.m; sourceTree = "<group>"; };
-		3D056C5C19A7847D00902567 /* VIPERWireFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPERWireFrame.h; sourceTree = "<group>"; };
-		3D056C5D19A7847D00902567 /* VIPERWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIPERWireFrame.m; sourceTree = "<group>"; };
-		3D056C7919A784A800902567 /* VIPERProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIPERProtocols.h; sourceTree = "<group>"; };
-		3D056C7A19A7876A00902567 /* VIPERDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERDataManager.swift; sourceTree = "<group>"; };
 		3D056C7C19A7881100902567 /* VIPERProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERProtocols.swift; sourceTree = "<group>"; };
-		3D11B06F19BB6928009274FB /* VIPERWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERWireFrame.swift; sourceTree = "<group>"; };
 		B749E1CA001F227ABD51B588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		B749E5AD88942EB96F1BF056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		B749E8E7BDEC9D7FB43DCCCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,76 +69,9 @@
 		3D056C4C19A7847D00902567 /* default */ = {
 			isa = PBXGroup;
 			children = (
-				3D056C4D19A7847D00902567 /* objc */,
 				3D056C5E19A7847D00902567 /* swift */,
 			);
 			path = default;
-			sourceTree = "<group>";
-		};
-		3D056C4D19A7847D00902567 /* objc */ = {
-			isa = PBXGroup;
-			children = (
-				3D056C4E19A7847D00902567 /* DataManager */,
-				3D056C5119A7847D00902567 /* Interactor */,
-				3D056C5419A7847D00902567 /* Presenter */,
-				3D056C5719A7847D00902567 /* Protocols */,
-				3D056C5819A7847D00902567 /* ViewController */,
-				3D056C5B19A7847D00902567 /* WireFrame */,
-			);
-			path = objc;
-			sourceTree = "<group>";
-		};
-		3D056C4E19A7847D00902567 /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				3D056C4F19A7847D00902567 /* VIPERDataManager.h */,
-				3D056C5019A7847D00902567 /* VIPERDataManager.m */,
-			);
-			path = DataManager;
-			sourceTree = "<group>";
-		};
-		3D056C5119A7847D00902567 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				3D056C5219A7847D00902567 /* VIPERInteractor.h */,
-				3D056C5319A7847D00902567 /* VIPERInteractor.m */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		3D056C5419A7847D00902567 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				3D056C5519A7847D00902567 /* VIPERPresenter.h */,
-				3D056C5619A7847D00902567 /* VIPERPresenter.m */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		3D056C5719A7847D00902567 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				3D056C7919A784A800902567 /* VIPERProtocols.h */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		3D056C5819A7847D00902567 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				3D056C5919A7847D00902567 /* VIPERViewController.h */,
-				3D056C5A19A7847D00902567 /* VIPERViewController.m */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		3D056C5B19A7847D00902567 /* WireFrame */ = {
-			isa = PBXGroup;
-			children = (
-				3D056C5C19A7847D00902567 /* VIPERWireFrame.h */,
-				3D056C5D19A7847D00902567 /* VIPERWireFrame.m */,
-			);
-			path = WireFrame;
 			sourceTree = "<group>";
 		};
 		3D056C5E19A7847D00902567 /* swift */ = {
@@ -177,7 +90,6 @@
 		3D056C5F19A7847D00902567 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
-				3D056C7A19A7876A00902567 /* VIPERDataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -214,7 +126,6 @@
 		3D056C6419A7847D00902567 /* WireFrame */ = {
 			isa = PBXGroup;
 			children = (
-				3D11B06F19BB6928009274FB /* VIPERWireFrame.swift */,
 			);
 			path = WireFrame;
 			sourceTree = "<group>";
@@ -483,15 +394,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B749EBF8B846719B7113AA45 /* AppDelegate.swift in Sources */,
-				3D056C7519A7847D00902567 /* VIPERInteractor.m in Sources */,
-				3D056C7619A7847D00902567 /* VIPERPresenter.m in Sources */,
 				B749EDF5EBFE639D631AEC38 /* ViewController.swift in Sources */,
 				3D056C7D19A7881100902567 /* VIPERProtocols.swift in Sources */,
-				3D056C7B19A7876A00902567 /* VIPERDataManager.swift in Sources */,
-				3D056C7419A7847D00902567 /* VIPERDataManager.m in Sources */,
-				3D056C7819A7847D00902567 /* VIPERWireFrame.m in Sources */,
-				3D056C7719A7847D00902567 /* VIPERViewController.m in Sources */,
-				3D11B07019BB6928009274FB /* VIPERWireFrame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
