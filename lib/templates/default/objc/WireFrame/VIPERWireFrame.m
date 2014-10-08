@@ -20,7 +20,6 @@
     viewController.presenter = presenter;
     presenter.view = viewController;
     presenter.wireFrame = wireFrame;
-    wireFrame.view = viewController;
     presenter.interactor = interactor;
     interactor.presenter = presenter;
     interactor.dataManager = dataManager;
