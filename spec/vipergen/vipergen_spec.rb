@@ -44,7 +44,7 @@ end
 describe Vipergen::Generator do
 	context "when renaming file content" do 
 		before (:each) do
-			File.open("test.txt", 'w') {|f| f.write("I'm a #{Vipergen::Generator.REPLACEMENT_KEY} file") }
+			File.open("test.txt", 'w') {|f| f.write("I'm a #{Vipergen::Generator::REPLACEMENT_KEY} file") }
 		end
 
 		it "should rename every VIPER word to the given name" do
@@ -61,12 +61,12 @@ describe Vipergen::Generator do
 
 	context "when renaming file" do
 		before (:each) do
-			File.open("#{Vipergen::Generator.REPLACEMENT_KEY}test.txt", 'w') {|f| f.write("I'm a #{Vipergen::Generator.REPLACEMENT_KEY} file") }
+			File.open("#{Vipergen::Generator::REPLACEMENT_KEY}test.txt", 'w') {|f| f.write("I'm a #{Vipergen::Generator::REPLACEMENT_KEY} file") }
 		end
 
 		it "every file should be renamed in rename_files" do
 			expect(Vipergen::Generator).to receive(:rename_file)
-			Vipergen::Generator.rename_files(["#{Vipergen::Generator.REPLACEMENT_KEY}file.txt"], "pepito")
+			Vipergen::Generator.rename_files(["#{Vipergen::Generator::REPLACEMENT_KEY}file.txt"], "pepito")
 		end
 
 		it "should raise a SyntaxError exeption if there's a file in the template without the proper name" do
@@ -74,21 +74,21 @@ describe Vipergen::Generator do
 		end
 
 		it "should rename the VIPER in name to the given name" do
-			file = "#{Vipergen::Generator.REPLACEMENT_KEY}test.txt"
+			file = "#{Vipergen::Generator::REPLACEMENT_KEY}test.txt"
 			name = "RENAMED"
 			Vipergen::Generator.rename_file(file, name)
 			expect(File.exist? "RENAMEDtest.txt").to eq(true)
 		end
 
 		it "should rename the file content after the file name rename" do
-			file = "#{Vipergen::Generator.REPLACEMENT_KEY}test.txt"
+			file = "#{Vipergen::Generator::REPLACEMENT_KEY}test.txt"
 			name = "RENAMED"
 			expect(Vipergen::Generator).to receive(:rename_file_content)
 			Vipergen::Generator.rename_file(file, name)
 		end
 
 		after (:each) do
-			File.delete "#{Vipergen::Generator.REPLACEMENT_KEY}test.txt" if File.exist? "#{Vipergen::Generator.REPLACEMENT_KEY}test.txt"
+			File.delete "#{Vipergen::Generator::REPLACEMENT_KEY}test.txt" if File.exist? "#{Vipergen::Generator::REPLACEMENT_KEY}test.txt"
 			File.delete "RENAMEDtest.txt" if File.exist? "RENAMEDtest.txt"
 		end
 	end
