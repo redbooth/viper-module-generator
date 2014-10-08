@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    VIPERGen (0.1.6)
+    vipergen (0.2.1)
       thor
 
 GEM
@@ -41,9 +41,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  VIPERGen!
   bundler (~> 1.0)
   byebug
   codeclimate-test-reporter
   rake
   rspec
+  vipergen!
