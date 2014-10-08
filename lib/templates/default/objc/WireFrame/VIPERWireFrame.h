@@ -14,8 +14,6 @@
 
 @interface VIPERWireFrame : NSObject
 
-@property (nonatomic, weak) id view;
-
 + (void)presentVIPERModuleFrom:(id)fromView;
 
 @end
