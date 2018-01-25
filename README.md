@@ -3,14 +3,6 @@ Viper Module Generator
 
 ## :warning: This project is no longer maintained.
 
-[![Code Climate](https://codeclimate.com/github/teambox/viper-module-generator/badges/gpa.svg)](https://codeclimate.com/github/teambox/viper-module-generator)
-[![Build Status](https://travis-ci.org/teambox/viper-module-generator.svg?branch=master)](https://travis-ci.org/teambox/viper-module-generator)
-[![Test Coverage](https://codeclimate.com/github/teambox/viper-module-generator/badges/coverage.svg)](https://codeclimate.com/github/teambox/viper-module-generator)
-[![Dependency Status](https://gemnasium.com/teambox/viper-module-generator.svg)](https://gemnasium.com/teambox/viper-module-generator)
-
-
-![image](http://www.objc.io/images/issue-13/2014-06-07-viper-intro.jpg)
-
 Gem to generate VIPER modules to use them in your Objective-C/Swift projects
 The implementation scheme returned by this generator is hardly inspired in the example and post of Objc.io, http://www.objc.io/issue-13/viper.html .
 
@@ -121,6 +113,3 @@ updated_at: 2014-08-24
 - XCode Plugins: http://nshipster.com/xcode-plugins/
 - XCodeProj gem (to modify project groups structure): https://github.com/CocoaPods/Xcodeproj
 - Thor, powerful Ruby library for command line: http://whatisthor.com/
-
-## Contact
-If you have any doubt about the gem or even if you want to make any suggestion you can do it directly to my email address, pedro@redbooth.com . You can use the issues Github page too
